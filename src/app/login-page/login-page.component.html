@@ -1,0 +1,30 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container" style="font-size: 16px">
+  <div class="row col-md-offset-4 col-md-4  col-xs-12">
+    <h1>Ecommerce Backend</h1>
+    <div class="panel-group" style="margin-top:8%">
+      <div class="panel panel-default">
+        <div class="panel-heading"><b>Login</b></div>
+        <div class="panel-body">
+          <form #cusInfoForm="ngForm">
+
+            <div class="form-group">
+              <input type="text" class="form-control" id="userName" required [(ngModel)]="userName" name="userName" placeholder="User Name"><br>
+              <input type="password" class="form-control" id="password" required [(ngModel)]="password" name="password" placeholder="Password">
+            </div>
+            <div class="form-group text-center">
+              <button class="btn btn-primary" (click)="login()">Login</button>
+              <!--<button class="btn btn-primary" (click)="getOrders()">Login</button>-->
+            </div>
+          </form>
+          <div *ngIf="response">
+            <hr>
+     <span style="color:red"> {{response}} </span>
+    </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+

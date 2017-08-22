@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<side-menu></side-menu>
+<div *ngIf="orders" class="container">
+  <div class="col-md-offset-2 col-md-10">
+    <h1>Orders</h1>
+  <table class="table">
+    <tr>
+      <th>Order</th>
+      <th>Date</th>
+      <th>Customer</th>
+      <th>Payment Status</th>
+      <th>Order Status</th>
+      <th>Total</th>
+    </tr>
+    <tr *ngFor="let order of orders">
+      <td>{{order.dispOrderId}}</td>
+      <td>{{order.date | date:'dd-MM-yyyy hh:mm'}}</td>
+      <td>{{order.customerInfo.fname}} {{order.customerInfo.lname}}</td>
+      <td>{{order.paymentStatus}}</td>
+      <td>{{order.orderStatus.status}}</td>
+      <td>{{order.total}}</td>
+    </tr>
+  </table>
+  </div>
+</div>
